@@ -61,7 +61,7 @@ public class Segovia_3_MethodMadness extends Application {
         gc.strokePolygon(new double[]{125, 100, 150  },
                        new double[]{100, 125, 125  }, 3);
 
-        gc.strokeArc(125, 200, 90, 35, 45, 75, ArcType.OPEN);
+        gc.strokeArc(75, 175, 90, 45, 35, 125, ArcType.OPEN);
 
 
     }
