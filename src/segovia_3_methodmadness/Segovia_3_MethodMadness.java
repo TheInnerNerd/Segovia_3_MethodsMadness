@@ -33,8 +33,11 @@ public class Segovia_3_MethodMadness extends Application {
         Group root = new Group();
         Canvas canvas = new Canvas(300, 250);
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        drawShapes(gc);
+        drawBrows(gc);
+        drawEyes(gc);
         drawText(gc);
+        drawNose(gc);
+        drawMouth(gc);
         root.getChildren().add(canvas);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
@@ -44,7 +47,7 @@ public class Segovia_3_MethodMadness extends Application {
         gc.fillText("My Face", 95, 10);
     }
    
-    private void drawShapes(GraphicsContext gc) {
+    private void drawBrows(GraphicsContext gc) {
         gc.setFill(Color.RED);
         gc.setStroke(Color.BLUE);
         gc.setLineWidth(5);
@@ -52,18 +55,22 @@ public class Segovia_3_MethodMadness extends Application {
         gc.strokeLine(195, 35, 150, 50);
         gc.strokeLine(30, 50, 45, 35);
         gc.strokeLine(210, 50, 195, 35);
+    }
+    
+    private void drawEyes(GraphicsContext gc) {
         gc.fillOval(60, 60, 30, 30);
         gc.strokeOval(60, 60, 30, 30);
         gc.fillOval(150, 60, 30, 30);
         gc.strokeOval(150, 60, 30, 30);
+    }
+    private void drawNose(GraphicsContext gc) {
         gc.fillPolygon(new double[]{125, 100, 150  },
                        new double[]{100, 125, 125  }, 3);
         gc.strokePolygon(new double[]{125, 100, 150  },
                        new double[]{100, 125, 125  }, 3);
-
-        gc.strokeArc(75, 175, 90, 45, 35, 125, ArcType.OPEN);
-
-
+    }
+    private void drawMouth(GraphicsContext gc) {
+    gc.strokeArc(75, 175, 90, 45, 35, 125, ArcType.OPEN);
     }
 }
-              
+
